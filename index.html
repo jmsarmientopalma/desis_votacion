@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>Desis - Formulario de Votación</title>
-  </head>
-  <link rel="stylesheet" href="/css/master.css">
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <title>Desis - Formulario de Votación</title>
+    </head>
+    
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="shortcut icon" href="image/check.png"/>
 
-  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <body>
+        
+        <h2>Formulario de Votación</h2>
+        
+        <div class="container">
+
+            <form action="backend/votar.module.php" method="post" class="table">
+
+                <div class="tr">
+                    <div class="td right">
+                        <label for="txtName">Nombre y Apellido</label>
+                    </div>
+                    <div class="td left">
+                        <input type="text" name="txtName" id="txtName" placeholder="Ingrese nombre completo..." required>
+                    </div>
+                </div>
+
+                <div class="tr">
+                    <div class="td right">
+                        <label for="txtAlias">Alias</label>
+                    </div>
+                    <div class="td left">
+                        <input type="text" name="txtAlias" id="txtAlias" placeholder="Ingrese su alias...">
+                    </div>
+                </div>                
+                
+                <div class="tr">
+                    <div class="td right">
+                        <label for="txtEmail">E-mail</label>
+                    </div>
+                    <div class="td left">
+                        <input type="email" name="txtEmail" id="txtEmail" placeholder="casilla@correo.com">
+                    </div>
+                </div>
+                
+                <div class="tr">
+                    <div class="td right">
+                        <label for="slRegion">Región</label>
+                    </div>
+                    <div class="td left">
+                        <select name="slRegion" id="slRegion"></select>
+                    </div>
+                </div>
+                
+                <div class="tr">
+                    <div class="td right">
+                        <label for="slComuna">Comuna</label>
+                    </div>
+                    <div class="td left">
+                        <select name="slComuna" id="slComuna"></select>
+                    </div>
+                </div>
+                
+                <div class="tr">
+                    <div class="td right">
+                        <label for="slCandidato">Candidato</label>
+                    </div>
+                    <div class="td left">
+                        <select name="slCandidato" id="slCandidato"></select>
+                    </div>
+                </div>
+
+                <div class="tr">
+                    <div class="td right">
+                        <label>¿Cómo se enteró de nosotros?</label>
+                    </div>
+                    <div class="td left">
+                        <fieldset>
+                            <div>
+                              <input type="checkbox" id="chkWeb" name="chkWeb" checked>
+                              <label for="chkWeb">Web</label>
+                            </div>
+                        
+                            <div>
+                              <input type="checkbox" id="chkTv" name="chkTv">
+                              <label for="chkTv">TV</label>
+                            </div>
+                        
+                            <div>
+                              <input type="checkbox" id="chkRrss" name="chkRrss">
+                              <label for="chkRrss">Redes Sociales</label>
+                            </div>
+                        
+                            <div>
+                              <input type="checkbox" id="chkFriend" name="chkFriend">
+                              <label for="chkFriend">Amigo</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="tr">
+                    <div class="td">&nbsp;</div>
+                    <div class="td center">
+                        <button type="button">Votar</button>
+                    </div>
+                </div>
+
+            </form>
+
+            <div id="alertOk" class="alert-ok">Voto correctamente emitido!</div>
+            <div id="alertErr" class="alert-err">Han ocurrido errores en el proceso.</div>
+        </div>
+
+        <div class="footer">
+            2023 - JM Sarmiento -&nbsp;<a href="mailto:jmsarmientopalma@gmail.com">jmsarmientopalma@gmail.com</a>
+        </div>
+
+    <script src="js/init.js"></script>
+    </body>
 </html>
