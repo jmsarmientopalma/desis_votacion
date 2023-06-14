@@ -41,6 +41,13 @@ input {
     border: 1px solid whitesmoke;
 }
 
+select {
+    border-radius: 6px;
+    padding: 5px;
+    color: darkgreen;
+    border: 1px solid whitesmoke;
+}
+
 label {
     font-size: small;
     color: whitesmoke;
