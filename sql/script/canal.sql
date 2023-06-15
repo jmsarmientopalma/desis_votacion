@@ -1,4 +1,4 @@
-CREATE TABLE desis_vote.canal (
+CREATE TABLE canal (
 	id INT auto_increment NOT NULL,
 	nombre varchar(20) NOT NULL,
 	estado TINYINT(1) DEFAULT 1 NOT NULL,
@@ -10,11 +10,11 @@ COLLATE=utf8mb4_general_ci;
 
 
 --  Auto-generated SQL script #202306141858
-INSERT INTO desis_vote.canal (nombre)
+INSERT INTO canal (nombre)
 	VALUES ('Web');
-INSERT INTO desis_vote.canal (nombre)
+INSERT INTO canal (nombre)
 	VALUES ('TV');
-INSERT INTO desis_vote.canal (nombre)
+INSERT INTO canal (nombre)
 	VALUES ('Redes Sociales');
-INSERT INTO desis_vote.canal (nombre)
+INSERT INTO canal (nombre)
 	VALUES ('Amigo');
