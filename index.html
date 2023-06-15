@@ -24,7 +24,15 @@
                         <label for="txtName">Nombre y Apellido</label>
                     </div>
                     <div class="td left">
-                        <input type="text" name="txtName" id="txtName" placeholder="Ingrese nombre completo..." required>
+                        <input 
+                            type="text" 
+                            name="txtName" 
+                            id="txtName" 
+                            minlength="1" 
+                            maxlength="40"
+                            placeholder="Ingrese nombre completo..." 
+                            required
+                        >
                     </div>
                 </div>
 
@@ -33,7 +41,27 @@
                         <label for="txtAlias">Alias</label>
                     </div>
                     <div class="td left">
-                        <input type="text" name="txtAlias" id="txtAlias" placeholder="Ingrese su alias...">
+                        <input 
+                            type="text" 
+                            name="txtAlias" 
+                            id="txtAlias" 
+                            minlength="5" 
+                            maxlength="20"
+                            pattern="^(?=[A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]{5,20}$" 
+                            placeholder="Ingrese su alias..." 
+                            title="Mínimo 5 letras y números"
+                            required
+                        >
+                    </div>
+                </div>                
+                
+
+                <div class="tr">
+                    <div class="td right">
+                        <label for="txtRut">RUT</label>
+                    </div>
+                    <div class="td left">
+                        <input type="text" name="txtRut" id="txtRut" placeholder="12345678-9" required>
                     </div>
                 </div>                
                 
@@ -42,7 +70,14 @@
                         <label for="txtEmail">E-mail</label>
                     </div>
                     <div class="td left">
-                        <input type="email" name="txtEmail" id="txtEmail" placeholder="casilla@correo.com">
+                        <input 
+                            type="email" 
+                            name="txtEmail" 
+                            id="txtEmail" 
+                            maxlength="60" 
+                            placeholder="casilla@correo.com" 
+                            required
+                        >
                     </div>
                 </div>
                 
@@ -79,25 +114,7 @@
                     </div>
                     <div class="td left">
                         <fieldset>
-                            <div>
-                              <input type="checkbox" id="chkWeb" name="chkWeb" checked>
-                              <label for="chkWeb">Web</label>
-                            </div>
-                        
-                            <div>
-                              <input type="checkbox" id="chkTv" name="chkTv">
-                              <label for="chkTv">TV</label>
-                            </div>
-                        
-                            <div>
-                              <input type="checkbox" id="chkRrss" name="chkRrss">
-                              <label for="chkRrss">Redes Sociales</label>
-                            </div>
-                        
-                            <div>
-                              <input type="checkbox" id="chkFriend" name="chkFriend">
-                              <label for="chkFriend">Amigo</label>
-                            </div>
+                              
                         </fieldset>
                     </div>
                 </div>
@@ -105,7 +122,7 @@
                 <div class="tr">
                     <div class="td">&nbsp;</div>
                     <div class="td center">
-                        <button type="button">Votar</button>
+                        <button id="btnVotar" type="button">Votar</button>
                     </div>
                 </div>
 
@@ -113,6 +130,7 @@
 
             <div id="alertOk" class="alert-ok">Voto correctamente emitido!</div>
             <div id="alertErr" class="alert-err">Han ocurrido errores en el proceso.</div>
+            <div id="alertInfo" class="alert-info">El RUT <span id="spnRut"></span> ya tiene un voto anterior registrado. El voto es único por RUT.</div>
         </div>
 
         <div class="footer">
